@@ -1,0 +1,15 @@
+<div class="row" style="margin-top: 10px;">
+    <div class="col">
+        <h4>Baked By {{CakeToShow.baker}}</h4>
+        <img src="{{CakeToShow.url}}" alt="cake pppiicccc">
+    </div>
+    <div class="col">
+        <p>Average Rating: {{CakeToShow.avgRating.toFixed(1)}}</p>
+        <div *ngFor="let cake of CakeToShow._ratings" style="margin-top: 20px;">
+            <p>
+                {{cake.comment}}
+                <br>
+                {{cake.star}} stars
+            </p>
+        </div>
+    </div>
